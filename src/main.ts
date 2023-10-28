@@ -1,3 +1,4 @@
+// 应用程序的入口文件将使用核心函数 NestFactory 来创建一个 Nest 应用程序实例
 import { NestFactory } from '@nestjs/core'
 import type { NestExpressApplication } from '@nestjs/platform-express'
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger'
