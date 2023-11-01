@@ -1,5 +1,5 @@
 // app.controller.ts
-import { Controller, Get } from '@nestjs/common'
+import { Controller, Get, HttpException, HttpStatus } from '@nestjs/common'
 
 import { AppService } from './app.service'
 // import { AuthService } from './auth/auth.service'
@@ -13,6 +13,7 @@ export class AppController {
 
   @Get('create')
   getHello(): string {
+    throw new HttpException('xxxx', HttpStatus.BAD_REQUEST)
     return this.appService.getHello()
   }
 }
